@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.24 (Build 197) (http://www.copasi.org) at 2018-08-24 08:48:34 UTC -->
+<!-- generated with COPASI 4.24 (Build 197) (http://www.copasi.org) at 2018-09-06 15:09:15 UTC -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="24" versionDevel="197" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -25,32 +25,6 @@ Reaction scheme where the products are created from the reactants and the change
       <ListOfParameterDescriptions>
         <ParameterDescription key="FunctionParameter_80" name="k1" order="0" role="constant"/>
         <ParameterDescription key="FunctionParameter_81" name="substrate" order="1" role="substrate"/>
-      </ListOfParameterDescriptions>
-    </Function>
-    <Function key="Function_14" name="Mass action (reversible)" type="MassAction" reversible="true">
-      <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <rdf:Description rdf:about="#Function_14">
-   <CopasiMT:is rdf:resource="urn:miriam:obo.sbo:SBO:0000042" />
-   </rdf:Description>
-   </rdf:RDF>
-      </MiriamAnnotation>
-      <Comment>
-        <body xmlns="http://www.w3.org/1999/xhtml">
-<b>Mass action rate law for reversible reactions</b>
-<p>
-Reaction scheme where the products are created from the reactants and the change of a product quantity is proportional to the product of reactant activities. The reaction scheme does include a reverse process that creates the reactants from the products.
-</p>
-</body>
-      </Comment>
-      <Expression>
-        k1*PRODUCT&lt;substrate_i>-k2*PRODUCT&lt;product_j>
-      </Expression>
-      <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_69" name="k1" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_68" name="substrate" order="1" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_78" name="k2" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_79" name="product" order="3" role="product"/>
       </ListOfParameterDescriptions>
     </Function>
     <Function key="Function_40" name="HMM_Modified" type="UserDefined" reversible="false">
@@ -98,7 +72,7 @@ Reaction scheme where the products are created from the reactants and the change
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
-  <Model key="Model_1" name="Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells" simulationType="time" timeUnit="s" volumeUnit="l" areaUnit="m²" lengthUnit="m" quantityUnit="nmol" type="deterministic" avogadroConstant="6.0221417899999999e+23">
+  <Model key="Model_1" name="Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells" simulationType="time" timeUnit="s" volumeUnit="ml" areaUnit="m²" lengthUnit="m" quantityUnit="nmol" type="deterministic" avogadroConstant="6.0221417899999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
    xmlns:dcterms="http://purl.org/dc/terms/"
@@ -767,9 +741,7 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
       </Metabolite>
       <Metabolite key="Metabolite_44" name="TRADD:TRAF2:TRAF5:RIP1_Inactive" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_44">
     <dcterms:created>
       <rdf:Description>
@@ -778,7 +750,6 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_45" name="TRAF1:TRAF2:TRAF3_Active" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -900,9 +871,7 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
       </Metabolite>
       <Metabolite key="Metabolite_54" name="MAP3K8:NF-kB_Inactive" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_54">
     <dcterms:created>
       <rdf:Description>
@@ -911,7 +880,6 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_55" name="proTNFR1" simulationType="fixed" compartment="Compartment_0" addNoise="false">
@@ -1148,53 +1116,41 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-    </ListOfMetabolites>
-    <ListOfReactions>
-      <Reaction key="Reaction_0" name="EGF_Binding_Unbinding" reversible="true" fast="false" addNoise="false">
+      <Metabolite key="Metabolite_73" name="MAP3K8_inhibitor" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_0">
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_73">
     <dcterms:created>
       <rdf:Description>
-        <dcterms:W3CDTF>2015-09-23T11:45:38Z</dcterms:W3CDTF>
+        <dcterms:W3CDTF>2018-08-29T17:37:35Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_74" name="MAP3K8:NF-kB_inhibited" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_74">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2018-08-29T18:04:04Z</dcterms:W3CDTF>
       </rdf:Description>
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_16" stoichiometry="1"/>
-          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_0" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_5013" name="k1" value="0.1"/>
-          <Constant key="Parameter_5012" name="k2" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
-              <SourceParameter reference="Parameter_5013"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
-              <SourceParameter reference="Metabolite_16"/>
-              <SourceParameter reference="Metabolite_1"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
-              <SourceParameter reference="Parameter_5012"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
-              <SourceParameter reference="Metabolite_0"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_1" name="Ras_Activation" reversible="false" fast="false" addNoise="false">
+      </Metabolite>
+    </ListOfMetabolites>
+    <ListOfReactions>
+      <Reaction key="Reaction_0" name="Ras_Activation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_1">
+  <rdf:Description rdf:about="#Reaction_0">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T10:59:43Z</dcterms:W3CDTF>
@@ -1213,16 +1169,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5011" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_5010" name="km" value="0.1"/>
+          <Constant key="Parameter_5013" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_5012" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_5011"/>
+              <SourceParameter reference="Parameter_5013"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_5010"/>
+              <SourceParameter reference="Parameter_5012"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_2"/>
@@ -1233,10 +1189,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_2" name="Raf1_Activation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_1" name="Raf1_Activation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_2">
+  <rdf:Description rdf:about="#Reaction_1">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:17:31Z</dcterms:W3CDTF>
@@ -1255,16 +1211,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5009" name="Kcat" value="0.12"/>
-          <Constant key="Parameter_5008" name="km" value="0.1"/>
+          <Constant key="Parameter_5011" name="Kcat" value="0.12"/>
+          <Constant key="Parameter_5010" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_5009"/>
+              <SourceParameter reference="Parameter_5011"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_5008"/>
+              <SourceParameter reference="Parameter_5010"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_4"/>
@@ -1275,10 +1231,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_3" name="Mek_Activation_Raf1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_2" name="Mek_Activation_Raf1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_3">
+  <rdf:Description rdf:about="#Reaction_2">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-10-06T11:47:11Z</dcterms:W3CDTF>
@@ -1297,16 +1253,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5007" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_5006" name="km" value="0.1"/>
+          <Constant key="Parameter_5009" name="Kcat" value="0.096"/>
+          <Constant key="Parameter_5008" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_5007"/>
+              <SourceParameter reference="Parameter_5009"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_5006"/>
+              <SourceParameter reference="Parameter_5008"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_6"/>
@@ -1317,10 +1273,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_4" name="Erk_Activation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_3" name="Erk_Activation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_4">
+  <rdf:Description rdf:about="#Reaction_3">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-10-06T10:30:33Z</dcterms:W3CDTF>
@@ -1339,16 +1295,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5005" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_5004" name="km" value="0.1"/>
+          <Constant key="Parameter_5007" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_5006" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_5005"/>
+              <SourceParameter reference="Parameter_5007"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_5004"/>
+              <SourceParameter reference="Parameter_5006"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_8"/>
@@ -1359,10 +1315,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_5" name="PI3K_Activation_pEGFR" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_4" name="PI3K_Activation_pEGFR" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_5">
+  <rdf:Description rdf:about="#Reaction_4">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:14:12Z</dcterms:W3CDTF>
@@ -1381,16 +1337,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5003" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_5002" name="km" value="0.1"/>
+          <Constant key="Parameter_5005" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_5004" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_5003"/>
+              <SourceParameter reference="Parameter_5005"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_5002"/>
+              <SourceParameter reference="Parameter_5004"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_0"/>
@@ -1401,10 +1357,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_6" name="PI3K_Activation_Ras" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_5" name="PI3K_Activation_Ras" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_6">
+  <rdf:Description rdf:about="#Reaction_5">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:14:08Z</dcterms:W3CDTF>
@@ -1423,16 +1379,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5001" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_5000" name="km" value="0.1"/>
+          <Constant key="Parameter_5003" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_5002" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_5001"/>
+              <SourceParameter reference="Parameter_5003"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_5000"/>
+              <SourceParameter reference="Parameter_5002"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_4"/>
@@ -1443,10 +1399,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_7" name="PI3K_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_6" name="PI3K_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_7">
+  <rdf:Description rdf:about="#Reaction_6">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:13:56Z</dcterms:W3CDTF>
@@ -1462,12 +1418,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4999" name="k1" value="0.1"/>
+          <Constant key="Parameter_5001" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4999"/>
+              <SourceParameter reference="Parameter_5001"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -1475,10 +1431,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_8" name="Akt_Activation_PI3K" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_7" name="Akt_Activation_PI3K" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_8">
+  <rdf:Description rdf:about="#Reaction_7">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-24T12:43:45Z</dcterms:W3CDTF>
@@ -1497,16 +1453,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4998" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4997" name="km" value="0.1"/>
+          <Constant key="Parameter_5000" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4999" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4998"/>
+              <SourceParameter reference="Parameter_5000"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4997"/>
+              <SourceParameter reference="Parameter_4999"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_12"/>
@@ -1517,10 +1473,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_9" name="Raf1_Deactivation_Akt" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_8" name="Raf1_Deactivation_Akt" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_9">
+  <rdf:Description rdf:about="#Reaction_8">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-10-06T10:45:52Z</dcterms:W3CDTF>
@@ -1539,16 +1495,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4996" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4995" name="km" value="0.1"/>
+          <Constant key="Parameter_4998" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4997" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4996"/>
+              <SourceParameter reference="Parameter_4998"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4995"/>
+              <SourceParameter reference="Parameter_4997"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_14"/>
@@ -1559,10 +1515,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_10" name="EGFR_Degradation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_9" name="EGFR_Degradation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_10">
+  <rdf:Description rdf:about="#Reaction_9">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T11:51:50Z</dcterms:W3CDTF>
@@ -1575,12 +1531,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4994" name="k1" value="0.1"/>
+          <Constant key="Parameter_4996" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4994"/>
+              <SourceParameter reference="Parameter_4996"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_0"/>
@@ -1588,10 +1544,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_11" name="Mek_Activation_bRafMutated" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_10" name="Mek_Activation_bRafMutated" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_11">
+  <rdf:Description rdf:about="#Reaction_10">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-10-06T11:54:34Z</dcterms:W3CDTF>
@@ -1610,16 +1566,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4993" name="km" value="0.1"/>
-          <Constant key="Parameter_4992" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4995" name="km" value="0.1"/>
+          <Constant key="Parameter_4994" name="Kcat" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4992"/>
+              <SourceParameter reference="Parameter_4994"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4993"/>
+              <SourceParameter reference="Parameter_4995"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_30"/>
@@ -1630,10 +1586,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_12" name="EGFR_Production" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_11" name="EGFR_Production" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_12">
+  <rdf:Description rdf:about="#Reaction_11">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T09:53:27Z</dcterms:W3CDTF>
@@ -1649,12 +1605,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4991" name="k1" value="0.1"/>
+          <Constant key="Parameter_4993" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4991"/>
+              <SourceParameter reference="Parameter_4993"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_17"/>
@@ -1662,10 +1618,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_13" name="PIP3_Activation_PIP3" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_12" name="PIP3_Activation_PIP3" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_13">
+  <rdf:Description rdf:about="#Reaction_12">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T12:11:07Z</dcterms:W3CDTF>
@@ -1684,16 +1640,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4990" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4989" name="km" value="0.1"/>
+          <Constant key="Parameter_4992" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4991" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4990"/>
+              <SourceParameter reference="Parameter_4992"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4989"/>
+              <SourceParameter reference="Parameter_4991"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_12"/>
@@ -1704,10 +1660,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_14" name="PIP3_Feedback_Deactivation_PTEN" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_13" name="PIP3_Feedback_Deactivation_PTEN" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_14">
+  <rdf:Description rdf:about="#Reaction_13">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:07:44Z</dcterms:W3CDTF>
@@ -1726,16 +1682,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_20" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4988" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4987" name="km" value="0.1"/>
+          <Constant key="Parameter_4990" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4989" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4988"/>
+              <SourceParameter reference="Parameter_4990"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4987"/>
+              <SourceParameter reference="Parameter_4989"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_20"/>
@@ -1746,10 +1702,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_15" name="Akt_Activation_PIP3" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_14" name="Akt_Activation_PIP3" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_15">
+  <rdf:Description rdf:about="#Reaction_14">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-24T12:43:45Z</dcterms:W3CDTF>
@@ -1763,6 +1719,48 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_14" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_18" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4988" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4987" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_264">
+              <SourceParameter reference="Parameter_4988"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_263">
+              <SourceParameter reference="Parameter_4987"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_262">
+              <SourceParameter reference="Metabolite_18"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_261">
+              <SourceParameter reference="Metabolite_15"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_15" name="PDK1_Activation" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_15">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2015-09-23T13:14:12Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_21" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_22" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_18" stoichiometry="1"/>
@@ -1783,57 +1781,15 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
               <SourceParameter reference="Metabolite_18"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="Metabolite_15"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_16" name="PDK1_Activation" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_16">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2015-09-23T13:14:12Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_21" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_22" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_18" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_4984" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4983" name="km" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4984"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4983"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_262">
-              <SourceParameter reference="Metabolite_18"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_261">
               <SourceParameter reference="Metabolite_21"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_17" name="PDK1_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_16" name="PDK1_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_17">
+  <rdf:Description rdf:about="#Reaction_16">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:16:35Z</dcterms:W3CDTF>
@@ -1849,12 +1805,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_21" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4982" name="k1" value="0.1"/>
+          <Constant key="Parameter_4984" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4982"/>
+              <SourceParameter reference="Parameter_4984"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_22"/>
@@ -1862,10 +1818,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_18" name="Akt_Activation_PDK1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_17" name="Akt_Activation_PDK1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_18">
+  <rdf:Description rdf:about="#Reaction_17">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-24T12:43:45Z</dcterms:W3CDTF>
@@ -1884,16 +1840,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_22" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4981" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4980" name="km" value="0.1"/>
+          <Constant key="Parameter_4983" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4982" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4981"/>
+              <SourceParameter reference="Parameter_4983"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4980"/>
+              <SourceParameter reference="Parameter_4982"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_22"/>
@@ -1904,10 +1860,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_19" name="Akt_Feedback_Activation_HSP90-Cdc37" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_18" name="Akt_Feedback_Activation_HSP90-Cdc37" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_19">
+  <rdf:Description rdf:about="#Reaction_18">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:07:44Z</dcterms:W3CDTF>
@@ -1926,16 +1882,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_23" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4979" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4978" name="km" value="0.1"/>
+          <Constant key="Parameter_4981" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4980" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4979"/>
+              <SourceParameter reference="Parameter_4981"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4978"/>
+              <SourceParameter reference="Parameter_4980"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_23"/>
@@ -1946,10 +1902,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_20" name="Akt_Feedback_Deactivation_PHLPP" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_19" name="Akt_Feedback_Deactivation_PHLPP" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_20">
+  <rdf:Description rdf:about="#Reaction_19">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:07:44Z</dcterms:W3CDTF>
@@ -1968,16 +1924,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_24" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4977" name="km" value="0.1"/>
-          <Constant key="Parameter_4976" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4979" name="km" value="0.1"/>
+          <Constant key="Parameter_4978" name="Kcat" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4976"/>
+              <SourceParameter reference="Parameter_4978"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4977"/>
+              <SourceParameter reference="Parameter_4979"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_24"/>
@@ -1988,10 +1944,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_21" name="Akt_Feedback_Activation_mTORC2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_20" name="Akt_Feedback_Activation_mTORC2" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_21">
+  <rdf:Description rdf:about="#Reaction_20">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:07:44Z</dcterms:W3CDTF>
@@ -2010,16 +1966,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_25" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4975" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4974" name="km" value="0.1"/>
+          <Constant key="Parameter_4977" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4976" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4975"/>
+              <SourceParameter reference="Parameter_4977"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4974"/>
+              <SourceParameter reference="Parameter_4976"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_25"/>
@@ -2030,10 +1986,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_22" name="Akt_Feedback_Activation_TCL1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_21" name="Akt_Feedback_Activation_TCL1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_22">
+  <rdf:Description rdf:about="#Reaction_21">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:07:44Z</dcterms:W3CDTF>
@@ -2052,16 +2008,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_26" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4973" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4972" name="km" value="0.1"/>
+          <Constant key="Parameter_4975" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4974" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4973"/>
+              <SourceParameter reference="Parameter_4975"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4972"/>
+              <SourceParameter reference="Parameter_4974"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_26"/>
@@ -2072,10 +2028,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_23" name="Akt_Feedback_Deactivation_CTMP" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_22" name="Akt_Feedback_Deactivation_CTMP" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_23">
+  <rdf:Description rdf:about="#Reaction_22">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T13:07:44Z</dcterms:W3CDTF>
@@ -2094,16 +2050,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_27" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4971" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4970" name="km" value="0.1"/>
+          <Constant key="Parameter_4973" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4972" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4971"/>
+              <SourceParameter reference="Parameter_4973"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4970"/>
+              <SourceParameter reference="Parameter_4972"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_27"/>
@@ -2114,10 +2070,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_24" name="Erk_Feedback_Deactivation_Raf1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_23" name="Erk_Feedback_Deactivation_Raf1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_24">
+  <rdf:Description rdf:about="#Reaction_23">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T10:56:35Z</dcterms:W3CDTF>
@@ -2139,16 +2095,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4969" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4968" name="km" value="0.1"/>
+          <Constant key="Parameter_4971" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4970" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4969"/>
+              <SourceParameter reference="Parameter_4971"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4968"/>
+              <SourceParameter reference="Parameter_4970"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_6"/>
@@ -2159,10 +2115,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_25" name="Sos_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_24" name="Sos_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_25">
+  <rdf:Description rdf:about="#Reaction_24">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-23T10:56:35Z</dcterms:W3CDTF>
@@ -2181,12 +2137,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_3" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4967" name="k1" value="0.1"/>
+          <Constant key="Parameter_4969" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4967"/>
+              <SourceParameter reference="Parameter_4969"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_2"/>
@@ -2194,10 +2150,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_26" name="mTORC1_Activation_Akt" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_25" name="mTORC1_Activation_Akt" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_26">
+  <rdf:Description rdf:about="#Reaction_25">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2015-09-24T12:43:45Z</dcterms:W3CDTF>
@@ -2216,16 +2172,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4966" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4965" name="km" value="0.1"/>
+          <Constant key="Parameter_4968" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4967" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4966"/>
+              <SourceParameter reference="Parameter_4968"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4965"/>
+              <SourceParameter reference="Parameter_4967"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_14"/>
@@ -2236,10 +2192,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_27" name="EGFR_Degradation_Free" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_26" name="EGFR_Degradation_Free" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_27">
+  <rdf:Description rdf:about="#Reaction_26">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-05T10:11:20Z</dcterms:W3CDTF>
@@ -2252,12 +2208,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4964" name="k1" value="0.1"/>
+          <Constant key="Parameter_4966" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4964"/>
+              <SourceParameter reference="Parameter_4966"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -2265,10 +2221,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_28" name="Sos_Activation_Grb2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_27" name="Sos_Activation_Grb2" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_28">
+  <rdf:Description rdf:about="#Reaction_27">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-05T17:07:23Z</dcterms:W3CDTF>
@@ -2287,16 +2243,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_32" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4963" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4962" name="km" value="0.1"/>
+          <Constant key="Parameter_4965" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4964" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4963"/>
+              <SourceParameter reference="Parameter_4965"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4962"/>
+              <SourceParameter reference="Parameter_4964"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_32"/>
@@ -2307,10 +2263,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_29" name="Grb2_Activation_pEGFR" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_28" name="Grb2_Activation_pEGFR" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_29">
+  <rdf:Description rdf:about="#Reaction_28">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-05T17:09:32Z</dcterms:W3CDTF>
@@ -2329,16 +2285,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4961" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4960" name="km" value="0.1"/>
+          <Constant key="Parameter_4963" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4962" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4961"/>
+              <SourceParameter reference="Parameter_4963"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4960"/>
+              <SourceParameter reference="Parameter_4962"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_0"/>
@@ -2349,10 +2305,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_30" name="Grb2_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_29" name="Grb2_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_30">
+  <rdf:Description rdf:about="#Reaction_29">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-05T17:10:06Z</dcterms:W3CDTF>
@@ -2368,12 +2324,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_33" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4959" name="k1" value="0.1"/>
+          <Constant key="Parameter_4961" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4959"/>
+              <SourceParameter reference="Parameter_4961"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_32"/>
@@ -2381,51 +2337,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_31" name="FGF_Binding_Unbinding" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_30" name="FGFR_Production" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_31">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-06T09:36:21Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_34" stoichiometry="1"/>
-          <Substrate metabolite="Metabolite_35" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_36" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_4958" name="k1" value="0.1"/>
-          <Constant key="Parameter_4957" name="k2" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
-              <SourceParameter reference="Parameter_4958"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
-              <SourceParameter reference="Metabolite_34"/>
-              <SourceParameter reference="Metabolite_35"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
-              <SourceParameter reference="Parameter_4957"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
-              <SourceParameter reference="Metabolite_36"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_32" name="FGFR_Production" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_32">
+  <rdf:Description rdf:about="#Reaction_30">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:06:53Z</dcterms:W3CDTF>
@@ -2441,12 +2356,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_35" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4956" name="k1" value="0.1"/>
+          <Constant key="Parameter_4960" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4956"/>
+              <SourceParameter reference="Parameter_4960"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_37"/>
@@ -2454,10 +2369,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_33" name="FGFR_Degradation_Free" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_31" name="FGFR_Degradation_Free" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_33">
+  <rdf:Description rdf:about="#Reaction_31">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:06:51Z</dcterms:W3CDTF>
@@ -2470,12 +2385,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_35" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4955" name="k1" value="0.1"/>
+          <Constant key="Parameter_4959" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4955"/>
+              <SourceParameter reference="Parameter_4959"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_35"/>
@@ -2483,10 +2398,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_34" name="FGFR_Degradation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_32" name="FGFR_Degradation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_34">
+  <rdf:Description rdf:about="#Reaction_32">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-06T09:48:23Z</dcterms:W3CDTF>
@@ -2499,12 +2414,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_36" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4954" name="k1" value="0.1"/>
+          <Constant key="Parameter_4958" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4954"/>
+              <SourceParameter reference="Parameter_4958"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_36"/>
@@ -2512,10 +2427,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_35" name="Grb2_Activation_pFGFR" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_33" name="Grb2_Activation_pFGFR" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_35">
+  <rdf:Description rdf:about="#Reaction_33">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-06T09:56:57Z</dcterms:W3CDTF>
@@ -2534,16 +2449,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_36" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4953" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4952" name="km" value="0.1"/>
+          <Constant key="Parameter_4957" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4956" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4953"/>
+              <SourceParameter reference="Parameter_4957"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4952"/>
+              <SourceParameter reference="Parameter_4956"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_36"/>
@@ -2554,92 +2469,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_36" name="TNF_Binding_Unbinding_TNFR1" reversible="true" fast="false" addNoise="false">
+      <Reaction key="Reaction_34" name="TRADD:TRAF2:TRAF5:RIP1_Activation_pTNFR1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_36">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2017-01-19T22:10:58Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_38" stoichiometry="1"/>
-          <Substrate metabolite="Metabolite_39" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_40" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_4951" name="k1" value="0.1"/>
-          <Constant key="Parameter_4950" name="k2" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
-              <SourceParameter reference="Parameter_4951"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
-              <SourceParameter reference="Metabolite_38"/>
-              <SourceParameter reference="Metabolite_39"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
-              <SourceParameter reference="Parameter_4950"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
-              <SourceParameter reference="Metabolite_40"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_37" name="TNF_Binding_Unbinding_TNFR2" reversible="true" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_37">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-12T13:36:34Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_38" stoichiometry="1"/>
-          <Substrate metabolite="Metabolite_41" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_42" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_4949" name="k1" value="0.1"/>
-          <Constant key="Parameter_4948" name="k2" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_14" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_69">
-              <SourceParameter reference="Parameter_4949"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_68">
-              <SourceParameter reference="Metabolite_38"/>
-              <SourceParameter reference="Metabolite_41"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_78">
-              <SourceParameter reference="Parameter_4948"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_79">
-              <SourceParameter reference="Metabolite_42"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_38" name="TRADD:TRAF2:TRAF5:RIP1_Activation_pTNFR1" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_38">
+  <rdf:Description rdf:about="#Reaction_34">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:05:34Z</dcterms:W3CDTF>
@@ -2658,16 +2491,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_40" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4947" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4946" name="km" value="0.1"/>
+          <Constant key="Parameter_4955" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4954" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4947"/>
+              <SourceParameter reference="Parameter_4955"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4946"/>
+              <SourceParameter reference="Parameter_4954"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_40"/>
@@ -2678,10 +2511,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_39" name="TRAF1:TRAF2:TRAF3_Activation_pTNFR2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_35" name="TRAF1:TRAF2:TRAF3_Activation_pTNFR2" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_39">
+  <rdf:Description rdf:about="#Reaction_35">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:08:11Z</dcterms:W3CDTF>
@@ -2700,16 +2533,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_42" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4945" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4944" name="km" value="0.1"/>
+          <Constant key="Parameter_4953" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4952" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4945"/>
+              <SourceParameter reference="Parameter_4953"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4944"/>
+              <SourceParameter reference="Parameter_4952"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_42"/>
@@ -2720,10 +2553,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_40" name="PI3K_Activation_TRAF1:TRAF2:TRAF3" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_36" name="PI3K_Activation_TRAF1:TRAF2:TRAF3" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_40">
+  <rdf:Description rdf:about="#Reaction_36">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:13:58Z</dcterms:W3CDTF>
@@ -2742,16 +2575,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_45" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4943" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4942" name="km" value="0.1"/>
+          <Constant key="Parameter_4951" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4950" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4943"/>
+              <SourceParameter reference="Parameter_4951"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4942"/>
+              <SourceParameter reference="Parameter_4950"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_45"/>
@@ -2762,10 +2595,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_41" name="NIK_Activation_TRADD:TRAF2:TRAF5:RIP1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_37" name="NIK_Activation_TRADD:TRAF2:TRAF5:RIP1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_41">
+  <rdf:Description rdf:about="#Reaction_37">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:18:35Z</dcterms:W3CDTF>
@@ -2784,16 +2617,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_43" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4941" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4940" name="km" value="0.1"/>
+          <Constant key="Parameter_4949" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4948" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4941"/>
+              <SourceParameter reference="Parameter_4949"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4940"/>
+              <SourceParameter reference="Parameter_4948"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_43"/>
@@ -2804,10 +2637,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_42" name="TAB1:TAB2:TAB3:TAK1_Activation_TRADD:TRAF2:TRAF5:RIP1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_38" name="TAB1:TAB2:TAB3:TAK1_Activation_TRADD:TRAF2:TRAF5:RIP1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_42">
+  <rdf:Description rdf:about="#Reaction_38">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:21:10Z</dcterms:W3CDTF>
@@ -2826,16 +2659,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_43" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4939" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4938" name="km" value="0.1"/>
+          <Constant key="Parameter_4947" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4946" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4939"/>
+              <SourceParameter reference="Parameter_4947"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4938"/>
+              <SourceParameter reference="Parameter_4946"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_43"/>
@@ -2846,10 +2679,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_43" name="IKKbeta:IKKalfa:IKKgamma_Activation_TRADD:TRAF2:TRAF5:RIP1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_39" name="IKKbeta:IKKalfa:IKKgamma_Activation_TRADD:TRAF2:TRAF5:RIP1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_43">
+  <rdf:Description rdf:about="#Reaction_39">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:23:39Z</dcterms:W3CDTF>
@@ -2868,16 +2701,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_43" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4937" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4936" name="km" value="0.1"/>
+          <Constant key="Parameter_4945" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4944" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4937"/>
+              <SourceParameter reference="Parameter_4945"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4936"/>
+              <SourceParameter reference="Parameter_4944"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_43"/>
@@ -2888,10 +2721,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_44" name="IKKbeta:IKKalfa:IKKgamma_Activation_NIK" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_40" name="IKKbeta:IKKalfa:IKKgamma_Activation_NIK" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_44">
+  <rdf:Description rdf:about="#Reaction_40">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:26:04Z</dcterms:W3CDTF>
@@ -2910,16 +2743,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_47" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4935" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4934" name="km" value="0.1"/>
+          <Constant key="Parameter_4943" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4942" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4935"/>
+              <SourceParameter reference="Parameter_4943"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4934"/>
+              <SourceParameter reference="Parameter_4942"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_47"/>
@@ -2930,10 +2763,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_45" name="IKKbeta:IKKalfa:IKKgamma_Activation_TAB1:TAB2:TAB3:TAK1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_41" name="IKKbeta:IKKalfa:IKKgamma_Activation_TAB1:TAB2:TAB3:TAK1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_45">
+  <rdf:Description rdf:about="#Reaction_41">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:36:49Z</dcterms:W3CDTF>
@@ -2952,16 +2785,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_51" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4933" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4932" name="km" value="0.1"/>
+          <Constant key="Parameter_4941" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4940" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4933"/>
+              <SourceParameter reference="Parameter_4941"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4932"/>
+              <SourceParameter reference="Parameter_4940"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_51"/>
@@ -2972,12 +2805,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_46" name="MAP3K8:NF-kB_Activation_IKKbeta:IKKalfa" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_42" name="MAP3K8:NF-kB_Activation_IKKbeta:IKKalfa" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_46">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_42">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:40:51Z</dcterms:W3CDTF>
@@ -2985,7 +2816,6 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_54" stoichiometry="1"/>
@@ -2997,16 +2827,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_49" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4931" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4930" name="km" value="0.1"/>
+          <Constant key="Parameter_4939" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4938" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4931"/>
+              <SourceParameter reference="Parameter_4939"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4930"/>
+              <SourceParameter reference="Parameter_4938"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_49"/>
@@ -3017,10 +2847,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_47" name="Mek_Activation_ Tpl2:NF-kB" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_43" name="Mek_Activation_MAP3K8:NF-kB" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_47">
+  <rdf:Description rdf:about="#Reaction_43">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T10:43:07Z</dcterms:W3CDTF>
@@ -3039,16 +2869,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_53" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4929" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4928" name="km" value="0.1"/>
+          <Constant key="Parameter_4937" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4936" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4929"/>
+              <SourceParameter reference="Parameter_4937"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4928"/>
+              <SourceParameter reference="Parameter_4936"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_53"/>
@@ -3059,10 +2889,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_48" name="TNFR1_Production" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_44" name="TNFR1_Production" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_48">
+  <rdf:Description rdf:about="#Reaction_44">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:08:05Z</dcterms:W3CDTF>
@@ -3078,12 +2908,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_39" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4927" name="k1" value="0.1"/>
+          <Constant key="Parameter_4935" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4927"/>
+              <SourceParameter reference="Parameter_4935"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_55"/>
@@ -3091,10 +2921,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_49" name="TNFR2_Production" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_45" name="TNFR2_Production" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_49">
+  <rdf:Description rdf:about="#Reaction_45">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:08:10Z</dcterms:W3CDTF>
@@ -3110,12 +2940,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_41" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4926" name="k1" value="0.1"/>
+          <Constant key="Parameter_4934" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4926"/>
+              <SourceParameter reference="Parameter_4934"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_56"/>
@@ -3123,10 +2953,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_50" name="TNFR1_Degradation_Free" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_46" name="TNFR1_Degradation_Free" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_50">
+  <rdf:Description rdf:about="#Reaction_46">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:08:04Z</dcterms:W3CDTF>
@@ -3139,12 +2969,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_39" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4925" name="k1" value="0.1"/>
+          <Constant key="Parameter_4933" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4925"/>
+              <SourceParameter reference="Parameter_4933"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_39"/>
@@ -3152,10 +2982,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_51" name="TNFR2_Degradation_Free" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_47" name="TNFR2_Degradation_Free" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_51">
+  <rdf:Description rdf:about="#Reaction_47">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:08:08Z</dcterms:W3CDTF>
@@ -3168,12 +2998,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_41" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4924" name="k1" value="0.1"/>
+          <Constant key="Parameter_4932" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4924"/>
+              <SourceParameter reference="Parameter_4932"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_41"/>
@@ -3181,10 +3011,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_52" name="TNFR1_Degradation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_48" name="TNFR1_Degradation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_52">
+  <rdf:Description rdf:about="#Reaction_48">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:08:02Z</dcterms:W3CDTF>
@@ -3197,12 +3027,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_40" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4923" name="k1" value="0.1"/>
+          <Constant key="Parameter_4931" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4923"/>
+              <SourceParameter reference="Parameter_4931"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_40"/>
@@ -3210,10 +3040,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_53" name="TNFR2_Degradation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_49" name="TNFR2_Degradation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_53">
+  <rdf:Description rdf:about="#Reaction_49">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:08:07Z</dcterms:W3CDTF>
@@ -3226,12 +3056,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Substrate metabolite="Metabolite_42" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4922" name="k1" value="0.1"/>
+          <Constant key="Parameter_4930" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4922"/>
+              <SourceParameter reference="Parameter_4930"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_42"/>
@@ -3239,10 +3069,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_54" name="IKKbeta:IKKalfa:IKKgamma_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_50" name="IKKbeta:IKKalfa:IKKgamma_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_54">
+  <rdf:Description rdf:about="#Reaction_50">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T11:33:26Z</dcterms:W3CDTF>
@@ -3258,12 +3088,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_50" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4921" name="k1" value="0.1"/>
+          <Constant key="Parameter_4929" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4921"/>
+              <SourceParameter reference="Parameter_4929"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_49"/>
@@ -3271,10 +3101,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_55" name="Mek_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_51" name="Mek_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_55">
+  <rdf:Description rdf:about="#Reaction_51">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T11:38:12Z</dcterms:W3CDTF>
@@ -3290,12 +3120,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_9" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4920" name="k1" value="0.1"/>
+          <Constant key="Parameter_4928" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4920"/>
+              <SourceParameter reference="Parameter_4928"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_8"/>
@@ -3303,10 +3133,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_56" name="mTORC1_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_52" name="mTORC1_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_56">
+  <rdf:Description rdf:about="#Reaction_52">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:07:15Z</dcterms:W3CDTF>
@@ -3322,12 +3152,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_29" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4919" name="k1" value="0.1"/>
+          <Constant key="Parameter_4927" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4919"/>
+              <SourceParameter reference="Parameter_4927"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_28"/>
@@ -3335,10 +3165,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_57" name="NIK_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_53" name="NIK_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_57">
+  <rdf:Description rdf:about="#Reaction_53">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T17:49:03Z</dcterms:W3CDTF>
@@ -3354,12 +3184,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_48" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4918" name="k1" value="0.1"/>
+          <Constant key="Parameter_4926" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4918"/>
+              <SourceParameter reference="Parameter_4926"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_47"/>
@@ -3367,10 +3197,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_58" name="Ras_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_54" name="Ras_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_58">
+  <rdf:Description rdf:about="#Reaction_54">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2017-01-20T12:07:47Z</dcterms:W3CDTF>
@@ -3386,12 +3216,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_5" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4917" name="k1" value="0.1"/>
+          <Constant key="Parameter_4925" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4917"/>
+              <SourceParameter reference="Parameter_4925"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_4"/>
@@ -3399,10 +3229,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_59" name="TAB1:TAB2:TAB3:TAK1_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_55" name="TAB1:TAB2:TAB3:TAK1_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_59">
+  <rdf:Description rdf:about="#Reaction_55">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-14T16:53:51Z</dcterms:W3CDTF>
@@ -3418,12 +3248,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_52" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4916" name="k1" value="0.1"/>
+          <Constant key="Parameter_4924" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4916"/>
+              <SourceParameter reference="Parameter_4924"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_51"/>
@@ -3431,12 +3261,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_60" name="MAP3K8:NF-kB_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_56" name="MAP3K8:NF-kB_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_60">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_56">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T11:58:07Z</dcterms:W3CDTF>
@@ -3444,7 +3272,6 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_53" stoichiometry="1"/>
@@ -3453,12 +3280,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_54" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4915" name="k1" value="0.1"/>
+          <Constant key="Parameter_4923" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4915"/>
+              <SourceParameter reference="Parameter_4923"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_53"/>
@@ -3466,10 +3293,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_61" name="TRADD:TRAF2:TRAF5:RIP1_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_57" name="TRADD:TRAF2:TRAF5:RIP1_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_61">
+  <rdf:Description rdf:about="#Reaction_57">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T13:25:14Z</dcterms:W3CDTF>
@@ -3485,12 +3312,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_44" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4914" name="k1" value="0.1"/>
+          <Constant key="Parameter_4922" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4914"/>
+              <SourceParameter reference="Parameter_4922"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_43"/>
@@ -3498,10 +3325,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_62" name="TRAF1:TRAF2:TRAF3_Deactivation" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_58" name="TRAF1:TRAF2:TRAF3_Deactivation" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_62">
+  <rdf:Description rdf:about="#Reaction_58">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-08T12:01:01Z</dcterms:W3CDTF>
@@ -3517,12 +3344,12 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Product metabolite="Metabolite_46" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4913" name="k1" value="0.1"/>
+          <Constant key="Parameter_4921" name="k1" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4913"/>
+              <SourceParameter reference="Parameter_4921"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_45"/>
@@ -3530,10 +3357,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_63" name="TRADDComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_59" name="TRADDComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_63">
+  <rdf:Description rdf:about="#Reaction_59">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T13:15:51Z</dcterms:W3CDTF>
@@ -3552,16 +3379,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_44" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4912" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4911" name="km" value="0.1"/>
+          <Constant key="Parameter_4920" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4919" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4912"/>
+              <SourceParameter reference="Parameter_4920"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4911"/>
+              <SourceParameter reference="Parameter_4919"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_44"/>
@@ -3572,10 +3399,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_64" name="TABComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_60" name="TABComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_64">
+  <rdf:Description rdf:about="#Reaction_60">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T17:33:41Z</dcterms:W3CDTF>
@@ -3594,16 +3421,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_52" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4910" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4909" name="km" value="0.1"/>
+          <Constant key="Parameter_4918" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4917" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4910"/>
+              <SourceParameter reference="Parameter_4918"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4909"/>
+              <SourceParameter reference="Parameter_4917"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_52"/>
@@ -3614,10 +3441,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_65" name="NIK_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_61" name="NIK_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_65">
+  <rdf:Description rdf:about="#Reaction_61">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T17:36:49Z</dcterms:W3CDTF>
@@ -3636,16 +3463,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_48" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4908" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4907" name="km" value="0.1"/>
+          <Constant key="Parameter_4916" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4915" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4908"/>
+              <SourceParameter reference="Parameter_4916"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4907"/>
+              <SourceParameter reference="Parameter_4915"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_48"/>
@@ -3656,10 +3483,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_66" name="IKKComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_62" name="IKKComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_66">
+  <rdf:Description rdf:about="#Reaction_62">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T17:46:51Z</dcterms:W3CDTF>
@@ -3678,16 +3505,16 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           <Modifier metabolite="Metabolite_50" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4906" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4905" name="km" value="0.1"/>
+          <Constant key="Parameter_4914" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4913" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4906"/>
+              <SourceParameter reference="Parameter_4914"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4905"/>
+              <SourceParameter reference="Parameter_4913"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_50"/>
@@ -3698,12 +3525,10 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_67" name="MAP3K8Complex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_63" name="MAP3K8Complex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_67">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_63">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-12T17:52:57Z</dcterms:W3CDTF>
@@ -3711,13 +3536,206 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
-
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_67" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_66" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_54" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4912" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4911" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_264">
+              <SourceParameter reference="Parameter_4912"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_263">
+              <SourceParameter reference="Parameter_4911"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_262">
+              <SourceParameter reference="Metabolite_54"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_261">
+              <SourceParameter reference="Metabolite_67"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_64" name="TRAFComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_64">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2016-09-13T11:33:34Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_69" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_68" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_46" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4910" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4909" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_264">
+              <SourceParameter reference="Parameter_4910"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_263">
+              <SourceParameter reference="Parameter_4909"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_262">
+              <SourceParameter reference="Metabolite_46"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_261">
+              <SourceParameter reference="Metabolite_69"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_65" name="PLX4032_degradation" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_65">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2016-09-13T12:21:01Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <Comment>
+          The k1 parameter was set in a way that it reflects the half life of PLX4032 drug i.e., 57hrs (205200s)
+
+C(t)=C0*e^(-ket) where ke is the half life constant.
+
+http://www.calculator.net/half-life-calculator.html
+        </Comment>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_31" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_4908" name="k1" value="3.3779e-06"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4908"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_31"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_66" name="bRafMutated_Deactivation_PLX4032" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_66">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2016-09-13T12:22:13Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_30" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_57" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_31" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4907" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4906" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_264">
+              <SourceParameter reference="Parameter_4907"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_263">
+              <SourceParameter reference="Parameter_4906"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_262">
+              <SourceParameter reference="Metabolite_31"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_261">
+              <SourceParameter reference="Metabolite_30"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_67" name="bRafMutated_Reconstitution" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_67">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2016-09-13T12:23:13Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_57" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_30" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4905" name="k1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4905"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_57"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_68" name="MAP3K8Complex_Activation_RasINH" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_68">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2016-09-12T17:52:57Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_71" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_70" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_54" stoichiometry="1"/>
@@ -3738,212 +3756,15 @@ Treatment with the RAF inhibitors have opposing effects on AKT phosphorylation d
               <SourceParameter reference="Metabolite_54"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="Metabolite_67"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_68" name="TRAFComplex_Activation_bRafINH" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_68">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-13T11:33:34Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_69" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_68" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_46" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_4902" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4901" name="km" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4902"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4901"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_262">
-              <SourceParameter reference="Metabolite_46"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="Metabolite_69"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_69" name="PLX4032_degradation" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_69">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-13T12:21:01Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <Comment>
-          The k1 parameter was set in a way that it reflects the half life of PLX4032 drug i.e., 57hrs (205200s)
-
-C(t)=C0*e^(-ket) where ke is the half life constant.
-
-http://www.calculator.net/half-life-calculator.html
-        </Comment>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_31" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfConstants>
-          <Constant key="Parameter_4900" name="k1" value="3.3779e-06"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4900"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_31"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_70" name="bRafMutated_Deactivation_PLX4032" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_70">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-13T12:22:13Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_30" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_57" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_31" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_4899" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4898" name="km" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4899"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4898"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_262">
-              <SourceParameter reference="Metabolite_31"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_261">
-              <SourceParameter reference="Metabolite_30"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_71" name="bRafMutated_Reconstitution" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_71">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-13T12:23:13Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_57" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_30" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_4897" name="k1" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4897"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_57"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_72" name="MAP3K8Complex_Activation_RasINH" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_72">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2016-09-12T17:52:57Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-
-        </MiriamAnnotation>
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_71" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_70" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_54" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_4896" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4895" name="km" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4896"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4895"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_262">
-              <SourceParameter reference="Metabolite_54"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_261">
               <SourceParameter reference="Metabolite_71"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_73" name="mTORC2_Deactivation_bRafMutated" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_69" name="mTORC2_Deactivation_bRafMutated" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_73">
+  <rdf:Description rdf:about="#Reaction_69">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-16T11:20:41Z</dcterms:W3CDTF>
@@ -3962,16 +3783,16 @@ http://www.calculator.net/half-life-calculator.html
           <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4894" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4893" name="km" value="0.1"/>
+          <Constant key="Parameter_4902" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4901" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4894"/>
+              <SourceParameter reference="Parameter_4902"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4893"/>
+              <SourceParameter reference="Parameter_4901"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_30"/>
@@ -3982,10 +3803,10 @@ http://www.calculator.net/half-life-calculator.html
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_74" name="mTORC2_Activation_PI3K" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_70" name="mTORC2_Activation_PI3K" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_74">
+  <rdf:Description rdf:about="#Reaction_70">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2016-09-16T11:24:52Z</dcterms:W3CDTF>
@@ -4004,16 +3825,16 @@ http://www.calculator.net/half-life-calculator.html
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4892" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4891" name="km" value="0.1"/>
+          <Constant key="Parameter_4900" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4899" name="km" value="0.1"/>
         </ListOfConstants>
         <KineticLaw function="Function_40" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_264">
-              <SourceParameter reference="Parameter_4892"/>
+              <SourceParameter reference="Parameter_4900"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_263">
-              <SourceParameter reference="Parameter_4891"/>
+              <SourceParameter reference="Parameter_4899"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_262">
               <SourceParameter reference="Metabolite_12"/>
@@ -4024,10 +3845,10 @@ http://www.calculator.net/half-life-calculator.html
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_75" name="MAP3K8Complex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_71" name="MAP3K8Complex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_75">
+  <rdf:Description rdf:about="#Reaction_71">
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2018-08-23T13:38:54Z</dcterms:W3CDTF>
@@ -4038,6 +3859,174 @@ http://www.calculator.net/half-life-calculator.html
         </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_66" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4898" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4897" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_267">
+              <SourceParameter reference="Metabolite_30"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="Parameter_4898"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_265">
+              <SourceParameter reference="Metabolite_66"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_250">
+              <SourceParameter reference="Parameter_4897"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_72" name="TRADDComplex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_72">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2018-08-23T13:48:03Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_58" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4896" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4895" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_267">
+              <SourceParameter reference="Metabolite_30"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="Parameter_4896"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_265">
+              <SourceParameter reference="Metabolite_58"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_250">
+              <SourceParameter reference="Parameter_4895"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_73" name="IKKComplex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_73">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2018-08-23T13:56:19Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_64" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4894" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4893" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_267">
+              <SourceParameter reference="Metabolite_30"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="Parameter_4894"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_265">
+              <SourceParameter reference="Metabolite_64"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_250">
+              <SourceParameter reference="Parameter_4893"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_74" name="NIK_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_74">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2018-08-23T13:58:35Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_62" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4892" name="Kcat" value="0.1"/>
+          <Constant key="Parameter_4891" name="km" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_267">
+              <SourceParameter reference="Metabolite_30"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="Parameter_4892"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_265">
+              <SourceParameter reference="Metabolite_62"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_250">
+              <SourceParameter reference="Parameter_4891"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_75" name="TABComplex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Reaction_75">
+    <dcterms:created>
+      <rdf:Description>
+        <dcterms:W3CDTF>2018-08-23T13:59:42Z</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:created>
+  </rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_61" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_10" stoichiometry="1"/>
@@ -4058,7 +4047,7 @@ http://www.calculator.net/half-life-calculator.html
               <SourceParameter reference="Parameter_4890"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_265">
-              <SourceParameter reference="Metabolite_66"/>
+              <SourceParameter reference="Metabolite_61"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_250">
               <SourceParameter reference="Parameter_4889"/>
@@ -4066,170 +4055,216 @@ http://www.calculator.net/half-life-calculator.html
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_76" name="TRADDComplex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_76">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2018-08-23T13:48:03Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
+      <Reaction key="Reaction_76" name="EGF_Binding_Unbinding (forward)" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_58" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_16" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+          <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
-        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4888" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4887" name="km" value="0.1"/>
+          <Constant key="Parameter_4888" name="k1" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_267">
-              <SourceParameter reference="Metabolite_30"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_266">
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="Parameter_4888"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_265">
-              <SourceParameter reference="Metabolite_58"/>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_16"/>
+              <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_250">
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_77" name="EGF_Binding_Unbinding (backward)" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_16" stoichiometry="1"/>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4887" name="k1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="Parameter_4887"/>
             </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_77" name="IKKComplex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_77">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2018-08-23T13:56:19Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
+      <Reaction key="Reaction_78" name="FGF_Binding_Unbinding (forward)" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_64" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_34" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_35" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+          <Product metabolite="Metabolite_36" stoichiometry="1"/>
         </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
-        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4886" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4885" name="km" value="0.1"/>
+          <Constant key="Parameter_4886" name="k1" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_267">
-              <SourceParameter reference="Metabolite_30"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_266">
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="Parameter_4886"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_265">
-              <SourceParameter reference="Metabolite_64"/>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_34"/>
+              <SourceParameter reference="Metabolite_35"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_250">
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_79" name="FGF_Binding_Unbinding (backward)" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_36" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_34" stoichiometry="1"/>
+          <Product metabolite="Metabolite_35" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4885" name="k1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="Parameter_4885"/>
             </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_36"/>
+            </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_78" name="NIK_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
-        <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_78">
-    <dcterms:created>
-      <rdf:Description>
-        <dcterms:W3CDTF>2018-08-23T13:58:35Z</dcterms:W3CDTF>
-      </rdf:Description>
-    </dcterms:created>
-  </rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
+      <Reaction key="Reaction_80" name="TNF_Binding_Unbinding_TNFR1 (forward)" reversible="false" fast="false" addNoise="false">
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_62" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_38" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_39" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+          <Product metabolite="Metabolite_40" stoichiometry="1"/>
         </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
-        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4884" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4883" name="km" value="0.1"/>
+          <Constant key="Parameter_4884" name="k1" value="0.1"/>
         </ListOfConstants>
-        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_267">
-              <SourceParameter reference="Metabolite_30"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_266">
+            <CallParameter functionParameter="FunctionParameter_80">
               <SourceParameter reference="Parameter_4884"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_265">
-              <SourceParameter reference="Metabolite_62"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Parameter_4883"/>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_38"/>
+              <SourceParameter reference="Metabolite_39"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_79" name="TABComplex_pERK_bRafINH" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_81" name="TNF_Binding_Unbinding_TNFR1 (backward)" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_40" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_38" stoichiometry="1"/>
+          <Product metabolite="Metabolite_39" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4883" name="k1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4883"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_40"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_82" name="TNF_Binding_Unbinding_TNFR2 (forward)" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_38" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_41" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_42" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4882" name="k1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4882"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_38"/>
+              <SourceParameter reference="Metabolite_41"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_83" name="TNF_Binding_Unbinding_TNFR2 (backward)" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_42" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_38" stoichiometry="1"/>
+          <Product metabolite="Metabolite_41" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_4881" name="k1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4881"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_42"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_84" name="MAP3K8:NF-kB_Deactivation_MAP3K8_inhibitor" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Reaction_79">
+  <rdf:Description rdf:about="#Reaction_84">
     <dcterms:created>
       <rdf:Description>
-        <dcterms:W3CDTF>2018-08-23T13:59:42Z</dcterms:W3CDTF>
+        <dcterms:W3CDTF>2018-08-29T17:39:44Z</dcterms:W3CDTF>
       </rdf:Description>
     </dcterms:created>
   </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_61" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_54" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_73" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+          <Product metabolite="Metabolite_74" stoichiometry="1"/>
         </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_30" stoichiometry="1"/>
-        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4882" name="Kcat" value="0.1"/>
-          <Constant key="Parameter_4881" name="km" value="0.1"/>
+          <Constant key="Parameter_4880" name="k1" value="0.015"/>
         </ListOfConstants>
-        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_267">
-              <SourceParameter reference="Metabolite_30"/>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4880"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_266">
-              <SourceParameter reference="Parameter_4882"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_265">
-              <SourceParameter reference="Metabolite_61"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_250">
-              <SourceParameter reference="Parameter_4881"/>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_54"/>
+              <SourceParameter reference="Metabolite_73"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -4241,90 +4276,88 @@ http://www.calculator.net/half-life-calculator.html
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells" value="0" type="Model" simulationType="time"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]" value="1" type="Compartment" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)]" value="9.9999999999999998e-13" type="Compartment" simulationType="fixed"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Species Values" type="Group">
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pEGFR]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeEGFR]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeEGFR]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[SosActive]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[SosInactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[SosInactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[RasActive]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[RasInactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[RasInactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Raf1Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Raf1Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Raf1Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MekActive]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MekInactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MekInactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pERK]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[ERK]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[ERK]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PI3KActive]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PI3KInactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PI3KInactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pAKT]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[AKT]" value="6022141790000000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[EGF]" value="6.0221417900000005e+20" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proEGFR]" value="3011070895000000" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[AKT]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[EGF]" value="6022141.790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proEGFR]" value="3011.0708949999998" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PIP3Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PIP3Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PTENActive]" value="6022141790000000" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PDK1Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PIP3Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PTENActive]" value="6022.1417899999997" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PDK1Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PDK1Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[HSP90-Cdc37Active]" value="6022141790000000" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PHLPPActive]" value="6022141790000000" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[HSP90-Cdc37Active]" value="6022.1417899999997" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PHLPPActive]" value="6022.1417899999997" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC2Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TCL1Active]" value="6022141790000000" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[CTMPActive]" value="6022141790000000" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TCL1Active]" value="6022.1417899999997" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[CTMPActive]" value="6022.1417899999997" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC1Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC1Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[bRafMutated]" value="60221417900000000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PLX4032]" value="6.02214179e+17" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC1Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[bRafMutated]" value="60221.417900000015" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PLX4032]" value="602214.179" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Grb2Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Grb2Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[FGF]" value="6.0221417900000005e+20" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeFGFR]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Grb2Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[FGF]" value="6022141.790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeFGFR]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pFGFR]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proFGFR]" value="3011070895000000" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TNF]" value="6.0221417900000005e+20" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeTNFR1]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proFGFR]" value="3011.0708949999998" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TNF]" value="6022141.790000001" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeTNFR1]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pTNFR1]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeTNFR2]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeTNFR2]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pTNFR2]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIKActive]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIKInactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIKInactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_Inactive]" value="602214179000000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proTNFR1]" value="3011070895000000" type="Species" simulationType="fixed"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proTNFR2]" value="3011070895000000" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_Inactive]" value="602.21417899999994" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proTNFR1]" value="3011.0708949999998" type="Species" simulationType="fixed"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[proTNFR2]" value="3011.0708949999998" type="Species" simulationType="fixed"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[bRafMutatedInactive]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_bRafINH_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_bRafINH_Inactive]" value="903321268500000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_bRafINH_Inactive]" value="903321268500000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_bRafINH_Inactive]" value="903.32126850000077" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_bRafINH_Inactive]" value="903.32126850000077" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_bRafINH_Active]" value="0" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIK_bRafINH_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIK_bRafINH_Inactive]" value="903321268500000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIK_bRafINH_Inactive]" value="903.32126850000077" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_bRafINH_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_bRafINH_Inactive]" value="903321268500000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_bRafINH_Inactive]" value="903.32126850000077" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_bRafINH_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_bRafINH_Inactive]" value="903321268500000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_bRafINH_Inactive]" value="903.32126850000077" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_bRafINH_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_bRafINH_Inactive]" value="2709963805500000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_bRafINH_Inactive]" value="2709.9638055000005" type="Species" simulationType="reactions"/>
           <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_RasINH_Active]" value="0" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_RasINH_Inactive]" value="1354981902750000" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC2Inactive]" value="6022141790000000" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_RasINH_Inactive]" value="1354.9819027500002" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC2Inactive]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8_inhibitor]" value="6022.1417899999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_inhibited]" value="0" type="Species" simulationType="reactions"/>
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
-          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding],ParameterGroup=Parameters,Parameter=k2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Ras_Activation]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Ras_Activation],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Ras_Activation],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -4334,7 +4367,7 @@ http://www.calculator.net/half-life-calculator.html
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Raf1_Activation],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_Raf1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_Raf1],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_Raf1],ParameterGroup=Parameters,Parameter=Kcat" value="0.096000000000000002" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_Raf1],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Erk_Activation]" type="Reaction">
@@ -4438,10 +4471,6 @@ http://www.calculator.net/half-life-calculator.html
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Grb2_Deactivation]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Grb2_Deactivation],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding],ParameterGroup=Parameters,Parameter=k2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGFR_Production]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGFR_Production],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
@@ -4454,14 +4483,6 @@ http://www.calculator.net/half-life-calculator.html
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Grb2_Activation_pFGFR]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Grb2_Activation_pFGFR],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Grb2_Activation_pFGFR],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1],ParameterGroup=Parameters,Parameter=k2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2],ParameterGroup=Parameters,Parameter=k2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TRADD:TRAF2:TRAF5:RIP1_Activation_pTNFR1]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TRADD:TRAF2:TRAF5:RIP1_Activation_pTNFR1],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -4499,9 +4520,9 @@ http://www.calculator.net/half-life-calculator.html
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[MAP3K8:NF-kB_Activation_IKKbeta:IKKalfa],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[MAP3K8:NF-kB_Activation_IKKbeta:IKKalfa],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_ Tpl2:NF-kB]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_ Tpl2:NF-kB],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_ Tpl2:NF-kB],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_MAP3K8:NF-kB]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_MAP3K8:NF-kB],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Mek_Activation_MAP3K8:NF-kB],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNFR1_Production]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNFR1_Production],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -4614,6 +4635,33 @@ http://www.calculator.net/half-life-calculator.html
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TABComplex_pERK_bRafINH],ParameterGroup=Parameters,Parameter=Kcat" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TABComplex_pERK_bRafINH],ParameterGroup=Parameters,Parameter=km" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding (forward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding (forward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding (backward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[EGF_Binding_Unbinding (backward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding (forward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding (forward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding (backward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[FGF_Binding_Unbinding (backward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1 (forward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1 (forward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1 (backward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR1 (backward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2 (forward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2 (forward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2 (backward)]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[TNF_Binding_Unbinding_TNFR2 (backward)],ParameterGroup=Parameters,Parameter=k1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[MAP3K8:NF-kB_Deactivation_MAP3K8_inhibitor]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[MAP3K8:NF-kB_Deactivation_MAP3K8_inhibitor],ParameterGroup=Parameters,Parameter=k1" value="0.014999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
     </ListOfModelParameterSets>
@@ -4622,15 +4670,15 @@ http://www.calculator.net/half-life-calculator.html
       <StateTemplateVariable objectReference="Metabolite_14"/>
       <StateTemplateVariable objectReference="Metabolite_10"/>
       <StateTemplateVariable objectReference="Metabolite_8"/>
-      <StateTemplateVariable objectReference="Metabolite_12"/>
-      <StateTemplateVariable objectReference="Metabolite_49"/>
       <StateTemplateVariable objectReference="Metabolite_1"/>
-      <StateTemplateVariable objectReference="Metabolite_32"/>
+      <StateTemplateVariable objectReference="Metabolite_12"/>
       <StateTemplateVariable objectReference="Metabolite_35"/>
       <StateTemplateVariable objectReference="Metabolite_39"/>
       <StateTemplateVariable objectReference="Metabolite_41"/>
-      <StateTemplateVariable objectReference="Metabolite_5"/>
-      <StateTemplateVariable objectReference="Metabolite_3"/>
+      <StateTemplateVariable objectReference="Metabolite_49"/>
+      <StateTemplateVariable objectReference="Metabolite_32"/>
+      <StateTemplateVariable objectReference="Metabolite_54"/>
+      <StateTemplateVariable objectReference="Metabolite_4"/>
       <StateTemplateVariable objectReference="Metabolite_18"/>
       <StateTemplateVariable objectReference="Metabolite_21"/>
       <StateTemplateVariable objectReference="Metabolite_25"/>
@@ -4640,46 +4688,48 @@ http://www.calculator.net/half-life-calculator.html
       <StateTemplateVariable objectReference="Metabolite_43"/>
       <StateTemplateVariable objectReference="Metabolite_45"/>
       <StateTemplateVariable objectReference="Metabolite_47"/>
+      <StateTemplateVariable objectReference="Metabolite_2"/>
       <StateTemplateVariable objectReference="Metabolite_51"/>
-      <StateTemplateVariable objectReference="Metabolite_53"/>
+      <StateTemplateVariable objectReference="Metabolite_36"/>
+      <StateTemplateVariable objectReference="Metabolite_40"/>
+      <StateTemplateVariable objectReference="Metabolite_42"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
       <StateTemplateVariable objectReference="Metabolite_58"/>
       <StateTemplateVariable objectReference="Metabolite_61"/>
       <StateTemplateVariable objectReference="Metabolite_62"/>
       <StateTemplateVariable objectReference="Metabolite_64"/>
       <StateTemplateVariable objectReference="Metabolite_66"/>
-      <StateTemplateVariable objectReference="Metabolite_36"/>
-      <StateTemplateVariable objectReference="Metabolite_40"/>
-      <StateTemplateVariable objectReference="Metabolite_42"/>
-      <StateTemplateVariable objectReference="Metabolite_0"/>
       <StateTemplateVariable objectReference="Metabolite_11"/>
       <StateTemplateVariable objectReference="Metabolite_31"/>
       <StateTemplateVariable objectReference="Metabolite_68"/>
       <StateTemplateVariable objectReference="Metabolite_70"/>
-      <StateTemplateVariable objectReference="Metabolite_60"/>
+      <StateTemplateVariable objectReference="Metabolite_53"/>
       <StateTemplateVariable objectReference="Metabolite_59"/>
-      <StateTemplateVariable objectReference="Metabolite_63"/>
-      <StateTemplateVariable objectReference="Metabolite_65"/>
       <StateTemplateVariable objectReference="Metabolite_67"/>
-      <StateTemplateVariable objectReference="Metabolite_33"/>
-      <StateTemplateVariable objectReference="Metabolite_7"/>
+      <StateTemplateVariable objectReference="Metabolite_60"/>
+      <StateTemplateVariable objectReference="Metabolite_65"/>
+      <StateTemplateVariable objectReference="Metabolite_63"/>
+      <StateTemplateVariable objectReference="Metabolite_73"/>
+      <StateTemplateVariable objectReference="Metabolite_5"/>
       <StateTemplateVariable objectReference="Metabolite_15"/>
+      <StateTemplateVariable objectReference="Metabolite_33"/>
+      <StateTemplateVariable objectReference="Metabolite_13"/>
       <StateTemplateVariable objectReference="Metabolite_57"/>
-      <StateTemplateVariable objectReference="Metabolite_54"/>
-      <StateTemplateVariable objectReference="Metabolite_48"/>
-      <StateTemplateVariable objectReference="Metabolite_52"/>
-      <StateTemplateVariable objectReference="Metabolite_46"/>
-      <StateTemplateVariable objectReference="Metabolite_72"/>
-      <StateTemplateVariable objectReference="Metabolite_2"/>
-      <StateTemplateVariable objectReference="Metabolite_44"/>
       <StateTemplateVariable objectReference="Metabolite_29"/>
+      <StateTemplateVariable objectReference="Metabolite_46"/>
+      <StateTemplateVariable objectReference="Metabolite_44"/>
+      <StateTemplateVariable objectReference="Metabolite_52"/>
+      <StateTemplateVariable objectReference="Metabolite_3"/>
+      <StateTemplateVariable objectReference="Metabolite_48"/>
+      <StateTemplateVariable objectReference="Metabolite_72"/>
+      <StateTemplateVariable objectReference="Metabolite_7"/>
+      <StateTemplateVariable objectReference="Metabolite_9"/>
       <StateTemplateVariable objectReference="Metabolite_22"/>
-      <StateTemplateVariable objectReference="Metabolite_4"/>
+      <StateTemplateVariable objectReference="Metabolite_74"/>
       <StateTemplateVariable objectReference="Metabolite_19"/>
       <StateTemplateVariable objectReference="Metabolite_50"/>
-      <StateTemplateVariable objectReference="Metabolite_69"/>
-      <StateTemplateVariable objectReference="Metabolite_9"/>
       <StateTemplateVariable objectReference="Metabolite_71"/>
-      <StateTemplateVariable objectReference="Metabolite_13"/>
+      <StateTemplateVariable objectReference="Metabolite_69"/>
       <StateTemplateVariable objectReference="Metabolite_16"/>
       <StateTemplateVariable objectReference="Metabolite_17"/>
       <StateTemplateVariable objectReference="Metabolite_20"/>
@@ -4695,7 +4745,7 @@ http://www.calculator.net/half-life-calculator.html
       <StateTemplateVariable objectReference="Compartment_0"/>
     </StateTemplate>
     <InitialState type="initialState">
-      0 0 0 0 0 0 6022141790000000 0 6022141790000000 6022141790000000 6022141790000000 6022141790000000 6022141790000000 0 6022141790000000 0 0 60221417900000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6022141790000000 6.02214179e+17 0 0 903321268500000 903321268500000 903321268500000 903321268500000 903321268500000 6022141790000000 6022141790000000 6022141790000000 0 602214179000000 6022141790000000 6022141790000000 6022141790000000 6022141790000000 0 6022141790000000 6022141790000000 0 0 6022141790000000 6022141790000000 2709963805500000 6022141790000000 1354981902750000 6022141790000000 6.0221417900000005e+20 3011070895000000 6022141790000000 6022141790000000 6022141790000000 6022141790000000 6022141790000000 6.0221417900000005e+20 3011070895000000 6.0221417900000005e+20 3011070895000000 3011070895000000 1 
+      0 0 0 0 6022.1417899999997 0 6022.1417899999997 6022.1417899999997 6022.1417899999997 0 0 602.21417899999994 0 0 6022.1417899999997 0 0 60221.417900000015 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6022.1417899999997 602214.179 0 0 0 903.32126850000077 903.32126850000077 903.32126850000077 903.32126850000077 903.32126850000077 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 0 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 0 0 6022.1417899999997 6022.1417899999997 1354.9819027500002 2709.9638055000005 6022141.790000001 3011.0708949999998 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022.1417899999997 6022141.790000001 3011.0708949999998 6022141.790000001 3011.0708949999998 3011.0708949999998 9.9999999999999998e-13 
     </InitialState>
   </Model>
   <ListOfTasks>
@@ -4739,10 +4789,18 @@ http://www.calculator.net/half-life-calculator.html
       </Method>
     </Task>
     <Task key="Task_16" name="Scan" type="scan" scheduled="false" updateModel="false">
-      <Report reference="Report_18" target="" append="1" confirmOverwrite="1"/>
+      <Report reference="Report_18" target="treated.txt" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
+          <ParameterGroup name="ScanItem">
+            <Parameter name="Number of steps" type="unsignedInteger" value="30"/>
+            <Parameter name="Type" type="unsignedInteger" value="1"/>
+            <Parameter name="Object" type="cn" value="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8_inhibitor],Reference=InitialConcentration"/>
+            <Parameter name="Minimum" type="float" value="0"/>
+            <Parameter name="Maximum" type="float" value="10"/>
+            <Parameter name="log" type="bool" value="0"/>
+          </ParameterGroup>
         </ParameterGroup>
         <Parameter name="Output in subtask" type="bool" value="1"/>
         <Parameter name="Adjust initial conditions" type="bool" value="0"/>
@@ -4793,72 +4851,6 @@ http://www.calculator.net/half-life-calculator.html
         <Parameter name="Time-Course" type="cn" value="CN=Root,Vector=TaskList[Time-Course]"/>
         <Parameter name="Create Parameter Sets" type="bool" value="0"/>
         <ParameterGroup name="Experiment Set">
-          <ParameterGroup name="Experiment">
-            <Parameter name="Data is Row Oriented" type="bool" value="1"/>
-            <Parameter name="Experiment Type" type="unsignedInteger" value="1"/>
-            <Parameter name="File Name" type="file" value="expfit_pAKT.txt"/>
-            <Parameter name="First Row" type="unsignedInteger" value="1"/>
-            <Parameter name="Key" type="key" value="Experiment_0"/>
-            <Parameter name="Last Row" type="unsignedInteger" value="6"/>
-            <Parameter name="Normalize Weights per Experiment" type="bool" value="1"/>
-            <Parameter name="Number of Columns" type="unsignedInteger" value="2"/>
-            <ParameterGroup name="Object Map">
-              <ParameterGroup name="0">
-                <Parameter name="Role" type="unsignedInteger" value="3"/>
-              </ParameterGroup>
-              <ParameterGroup name="1">
-                <Parameter name="Object CN" type="cn" value="CN=Root,Model=Modelling thyroid cancer mutations in MAPK and PI3K/AKT pathway,Vector=Compartments[compartment],Vector=Metabolites[pAKT],Reference=Concentration"/>
-                <Parameter name="Role" type="unsignedInteger" value="2"/>
-              </ParameterGroup>
-            </ParameterGroup>
-            <Parameter name="Row containing Names" type="unsignedInteger" value="1"/>
-            <Parameter name="Separator" type="string" value="&#x09;"/>
-            <Parameter name="Weight Method" type="unsignedInteger" value="1"/>
-          </ParameterGroup>
-          <ParameterGroup name="Experiment_1">
-            <Parameter name="Data is Row Oriented" type="bool" value="1"/>
-            <Parameter name="Experiment Type" type="unsignedInteger" value="1"/>
-            <Parameter name="File Name" type="file" value="expfit_pEGFR.txt"/>
-            <Parameter name="First Row" type="unsignedInteger" value="1"/>
-            <Parameter name="Key" type="key" value="Experiment_1"/>
-            <Parameter name="Last Row" type="unsignedInteger" value="6"/>
-            <Parameter name="Normalize Weights per Experiment" type="bool" value="1"/>
-            <Parameter name="Number of Columns" type="unsignedInteger" value="2"/>
-            <ParameterGroup name="Object Map">
-              <ParameterGroup name="0">
-                <Parameter name="Role" type="unsignedInteger" value="3"/>
-              </ParameterGroup>
-              <ParameterGroup name="1">
-                <Parameter name="Object CN" type="cn" value="CN=Root,Model=Modelling thyroid cancer mutations in MAPK and PI3K/AKT pathway,Vector=Compartments[compartment],Vector=Metabolites[pEGFR],Reference=Concentration"/>
-                <Parameter name="Role" type="unsignedInteger" value="2"/>
-              </ParameterGroup>
-            </ParameterGroup>
-            <Parameter name="Row containing Names" type="unsignedInteger" value="1"/>
-            <Parameter name="Separator" type="string" value="&#x09;"/>
-            <Parameter name="Weight Method" type="unsignedInteger" value="1"/>
-          </ParameterGroup>
-          <ParameterGroup name="Experiment_2">
-            <Parameter name="Data is Row Oriented" type="bool" value="1"/>
-            <Parameter name="Experiment Type" type="unsignedInteger" value="1"/>
-            <Parameter name="File Name" type="file" value="expfit_pERK.txt"/>
-            <Parameter name="First Row" type="unsignedInteger" value="1"/>
-            <Parameter name="Key" type="key" value="Experiment_2"/>
-            <Parameter name="Last Row" type="unsignedInteger" value="6"/>
-            <Parameter name="Normalize Weights per Experiment" type="bool" value="1"/>
-            <Parameter name="Number of Columns" type="unsignedInteger" value="2"/>
-            <ParameterGroup name="Object Map">
-              <ParameterGroup name="0">
-                <Parameter name="Role" type="unsignedInteger" value="3"/>
-              </ParameterGroup>
-              <ParameterGroup name="1">
-                <Parameter name="Object CN" type="cn" value="CN=Root,Model=Modelling thyroid cancer mutations in MAPK and PI3K/AKT pathway,Vector=Compartments[compartment],Vector=Metabolites[pERK],Reference=Concentration"/>
-                <Parameter name="Role" type="unsignedInteger" value="2"/>
-              </ParameterGroup>
-            </ParameterGroup>
-            <Parameter name="Row containing Names" type="unsignedInteger" value="1"/>
-            <Parameter name="Separator" type="string" value="&#x09;"/>
-            <Parameter name="Weight Method" type="unsignedInteger" value="1"/>
-          </ParameterGroup>
         </ParameterGroup>
         <ParameterGroup name="Validation Set">
           <Parameter name="Weight" type="unsignedFloat" value="1"/>
@@ -4919,13 +4911,13 @@ http://www.calculator.net/half-life-calculator.html
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
-          <Parameter name="SingleObject" type="cn" value=""/>
-          <Parameter name="ObjectListType" type="unsignedInteger" value="7"/>
+          <Parameter name="SingleObject" type="cn" value="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pERK],Reference=Concentration"/>
+          <Parameter name="ObjectListType" type="unsignedInteger" value="1"/>
         </ParameterGroup>
         <ParameterGroup name="ListOfVariables">
           <ParameterGroup name="Variables">
             <Parameter name="SingleObject" type="cn" value=""/>
-            <Parameter name="ObjectListType" type="unsignedInteger" value="41"/>
+            <Parameter name="ObjectListType" type="unsignedInteger" value="3"/>
           </ParameterGroup>
           <ParameterGroup name="Variables">
             <Parameter name="SingleObject" type="cn" value=""/>
@@ -5118,70 +5110,8 @@ http://www.calculator.net/half-life-calculator.html
         A table of scan parameters, time, variable species concentrations, variable compartment volumes, and variable global quantity values.
       </Comment>
       <Table printTitle="1">
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Raf1_Activation],ParameterGroup=Parameters,Parameter=Kcat,Reference=Value"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Reactions[Raf1_Activation],ParameterGroup=Parameters,Parameter=km,Reference=Value"/>
         <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Reference=Time"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pEGFR],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeEGFR],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[SosActive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[SosInactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[RasActive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[RasInactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Raf1Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Raf1Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MekActive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MekInactive],Reference=Concentration"/>
         <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pERK],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[ERK],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PI3KActive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PI3KInactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pAKT],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[AKT],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PIP3Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PIP3Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PDK1Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PDK1Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC2Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC1Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC1Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[bRafMutated],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[PLX4032],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Grb2Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[Grb2Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeFGFR],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pFGFR],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeTNFR1],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pTNFR1],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[freeTNFR2],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[pTNFR2],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIKActive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIKInactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[bRafMutatedInactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_bRafINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRADD:TRAF2:TRAF5:RIP1_bRafINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_bRafINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TAB1:TAB2:TAB3:TAK1_bRafINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIK_bRafINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[NIK_bRafINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_bRafINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[IKKbeta:IKKalfa:IKKgamma_bRafINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_bRafINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_bRafINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_bRafINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[TRAF1:TRAF2:TRAF3_bRafINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_RasINH_Active],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[MAP3K8:NF-kB_RasINH_Inactive],Reference=Concentration"/>
-        <Object cn="CN=Root,Model=Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells,Vector=Compartments[Sphere (thyroid cancer cell)],Vector=Metabolites[mTORC2Inactive],Reference=Concentration"/>
       </Table>
     </Report>
   </ListOfReports>
@@ -5208,98 +5138,95 @@ http://www.calculator.net/half-life-calculator.html
   <GUI>
   </GUI>
   <SBMLReference file="8505C_Spheres_V2.7_reproductive.xml">
-    <SBMLMap SBMLid="Akt_Activation_PDK1" COPASIkey="Reaction_18"/>
-    <SBMLMap SBMLid="Akt_Activation_PIP3" COPASIkey="Reaction_15"/>
-    <SBMLMap SBMLid="Akt_Feedback_Activation_HSP90_Cdc37" COPASIkey="Reaction_19"/>
-    <SBMLMap SBMLid="Akt_Feedback_Activation_TCL1" COPASIkey="Reaction_22"/>
-    <SBMLMap SBMLid="Akt_Feedback_Activation_mTORC2" COPASIkey="Reaction_21"/>
-    <SBMLMap SBMLid="Akt_Feedback_Deactivation_CTMP" COPASIkey="Reaction_23"/>
-    <SBMLMap SBMLid="Akt_Feedback_Deactivation_PHLPP" COPASIkey="Reaction_20"/>
+    <SBMLMap SBMLid="Akt_Activation_PDK1" COPASIkey="Reaction_17"/>
+    <SBMLMap SBMLid="Akt_Activation_PIP3" COPASIkey="Reaction_14"/>
+    <SBMLMap SBMLid="Akt_Feedback_Activation_HSP90_Cdc37" COPASIkey="Reaction_18"/>
+    <SBMLMap SBMLid="Akt_Feedback_Activation_TCL1" COPASIkey="Reaction_21"/>
+    <SBMLMap SBMLid="Akt_Feedback_Activation_mTORC2" COPASIkey="Reaction_20"/>
+    <SBMLMap SBMLid="Akt_Feedback_Deactivation_CTMP" COPASIkey="Reaction_22"/>
+    <SBMLMap SBMLid="Akt_Feedback_Deactivation_PHLPP" COPASIkey="Reaction_19"/>
     <SBMLMap SBMLid="CTMPActive" COPASIkey="Metabolite_27"/>
-    <SBMLMap SBMLid="EGFR_Degradation_Free" COPASIkey="Reaction_27"/>
-    <SBMLMap SBMLid="Erk_Feedback_Deactivation_Raf1" COPASIkey="Reaction_24"/>
+    <SBMLMap SBMLid="EGFR_Degradation_Free" COPASIkey="Reaction_26"/>
+    <SBMLMap SBMLid="Erk_Feedback_Deactivation_Raf1" COPASIkey="Reaction_23"/>
     <SBMLMap SBMLid="FGF" COPASIkey="Metabolite_34"/>
-    <SBMLMap SBMLid="FGFR_Degradation" COPASIkey="Reaction_34"/>
-    <SBMLMap SBMLid="FGFR_Degradation_Free" COPASIkey="Reaction_33"/>
-    <SBMLMap SBMLid="FGFR_Production" COPASIkey="Reaction_32"/>
-    <SBMLMap SBMLid="FGF_Binding_Unbinding" COPASIkey="Reaction_31"/>
+    <SBMLMap SBMLid="FGFR_Degradation" COPASIkey="Reaction_32"/>
+    <SBMLMap SBMLid="FGFR_Degradation_Free" COPASIkey="Reaction_31"/>
+    <SBMLMap SBMLid="FGFR_Production" COPASIkey="Reaction_30"/>
     <SBMLMap SBMLid="Grb2Active" COPASIkey="Metabolite_32"/>
     <SBMLMap SBMLid="Grb2Inactive" COPASIkey="Metabolite_33"/>
-    <SBMLMap SBMLid="Grb2_Activation_pEGFR" COPASIkey="Reaction_29"/>
-    <SBMLMap SBMLid="Grb2_Activation_pFGFR" COPASIkey="Reaction_35"/>
-    <SBMLMap SBMLid="Grb2_Deactivation" COPASIkey="Reaction_30"/>
+    <SBMLMap SBMLid="Grb2_Activation_pEGFR" COPASIkey="Reaction_28"/>
+    <SBMLMap SBMLid="Grb2_Activation_pFGFR" COPASIkey="Reaction_33"/>
+    <SBMLMap SBMLid="Grb2_Deactivation" COPASIkey="Reaction_29"/>
     <SBMLMap SBMLid="HMM_Modified" COPASIkey="Function_40"/>
     <SBMLMap SBMLid="HSP90_Cdc37Active" COPASIkey="Metabolite_23"/>
-    <SBMLMap SBMLid="IKKComplex_Activation_bRafINH" COPASIkey="Reaction_66"/>
-    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Activation_NIK" COPASIkey="Reaction_44"/>
-    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Activation_TAB1_TAB2_TAB3_TAK1" COPASIkey="Reaction_45"/>
-    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Activation_TRADD_TRAF2_TRAF5_RIP1" COPASIkey="Reaction_43"/>
+    <SBMLMap SBMLid="IKKComplex_Activation_bRafINH" COPASIkey="Reaction_62"/>
+    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Activation_NIK" COPASIkey="Reaction_40"/>
+    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Activation_TAB1_TAB2_TAB3_TAK1" COPASIkey="Reaction_41"/>
+    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Activation_TRADD_TRAF2_TRAF5_RIP1" COPASIkey="Reaction_39"/>
     <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Active" COPASIkey="Metabolite_49"/>
-    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Deactivation" COPASIkey="Reaction_54"/>
+    <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Deactivation" COPASIkey="Reaction_50"/>
     <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_Inactive" COPASIkey="Metabolite_50"/>
     <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_bRafINH_Active" COPASIkey="Metabolite_64"/>
     <SBMLMap SBMLid="IKKbeta_IKKalfa_IKKgamma_bRafINH_Inactive" COPASIkey="Metabolite_65"/>
-    <SBMLMap SBMLid="Mek_Activation__Tpl2_NF_kB" COPASIkey="Reaction_47"/>
-    <SBMLMap SBMLid="Mek_Deactivation" COPASIkey="Reaction_55"/>
+    <SBMLMap SBMLid="Mek_Activation__Tpl2_NF_kB" COPASIkey="Reaction_43"/>
+    <SBMLMap SBMLid="Mek_Deactivation" COPASIkey="Reaction_51"/>
     <SBMLMap SBMLid="NIKActive" COPASIkey="Metabolite_47"/>
     <SBMLMap SBMLid="NIKInactive" COPASIkey="Metabolite_48"/>
-    <SBMLMap SBMLid="NIK_Activation_TRADD_TRAF2_TRAF5_RIP1" COPASIkey="Reaction_41"/>
-    <SBMLMap SBMLid="NIK_Activation_bRafINH" COPASIkey="Reaction_65"/>
-    <SBMLMap SBMLid="NIK_Deactivation" COPASIkey="Reaction_57"/>
+    <SBMLMap SBMLid="NIK_Activation_TRADD_TRAF2_TRAF5_RIP1" COPASIkey="Reaction_37"/>
+    <SBMLMap SBMLid="NIK_Activation_bRafINH" COPASIkey="Reaction_61"/>
+    <SBMLMap SBMLid="NIK_Deactivation" COPASIkey="Reaction_53"/>
     <SBMLMap SBMLid="NIK_bRafINH_Active" COPASIkey="Metabolite_62"/>
     <SBMLMap SBMLid="NIK_bRafINH_Inactive" COPASIkey="Metabolite_63"/>
     <SBMLMap SBMLid="PDK1Active" COPASIkey="Metabolite_22"/>
     <SBMLMap SBMLid="PDK1Inactive" COPASIkey="Metabolite_21"/>
-    <SBMLMap SBMLid="PDK1_Activation" COPASIkey="Reaction_16"/>
-    <SBMLMap SBMLid="PDK1_Deactivation" COPASIkey="Reaction_17"/>
+    <SBMLMap SBMLid="PDK1_Activation" COPASIkey="Reaction_15"/>
+    <SBMLMap SBMLid="PDK1_Deactivation" COPASIkey="Reaction_16"/>
     <SBMLMap SBMLid="PHLPPActive" COPASIkey="Metabolite_24"/>
-    <SBMLMap SBMLid="PI3K_Activation_TRAF1_TRAF2_TRAF3" COPASIkey="Reaction_40"/>
+    <SBMLMap SBMLid="PI3K_Activation_TRAF1_TRAF2_TRAF3" COPASIkey="Reaction_36"/>
     <SBMLMap SBMLid="PIP3Active" COPASIkey="Metabolite_18"/>
     <SBMLMap SBMLid="PIP3Inactive" COPASIkey="Metabolite_19"/>
-    <SBMLMap SBMLid="PIP3_Activation_PIP3" COPASIkey="Reaction_13"/>
-    <SBMLMap SBMLid="PIP3_Feedback_Deactivation_PTEN" COPASIkey="Reaction_14"/>
+    <SBMLMap SBMLid="PIP3_Activation_PIP3" COPASIkey="Reaction_12"/>
+    <SBMLMap SBMLid="PIP3_Feedback_Deactivation_PTEN" COPASIkey="Reaction_13"/>
     <SBMLMap SBMLid="PLX4032" COPASIkey="Metabolite_31"/>
-    <SBMLMap SBMLid="PLX4032_degradation" COPASIkey="Reaction_69"/>
+    <SBMLMap SBMLid="PLX4032_degradation" COPASIkey="Reaction_65"/>
     <SBMLMap SBMLid="PTENActive" COPASIkey="Metabolite_20"/>
-    <SBMLMap SBMLid="Ras_Deactivation" COPASIkey="Reaction_58"/>
-    <SBMLMap SBMLid="Sos_Activation_Grb2" COPASIkey="Reaction_28"/>
-    <SBMLMap SBMLid="Sos_Deactivation" COPASIkey="Reaction_25"/>
-    <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_Activation_TRADD_TRAF2_TRAF5_RIP1" COPASIkey="Reaction_42"/>
+    <SBMLMap SBMLid="Ras_Deactivation" COPASIkey="Reaction_54"/>
+    <SBMLMap SBMLid="Sos_Activation_Grb2" COPASIkey="Reaction_27"/>
+    <SBMLMap SBMLid="Sos_Deactivation" COPASIkey="Reaction_24"/>
+    <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_Activation_TRADD_TRAF2_TRAF5_RIP1" COPASIkey="Reaction_38"/>
     <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_Active" COPASIkey="Metabolite_51"/>
-    <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_Deactivation" COPASIkey="Reaction_59"/>
+    <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_Deactivation" COPASIkey="Reaction_55"/>
     <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_Inactive" COPASIkey="Metabolite_52"/>
     <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_bRafINH_Active" COPASIkey="Metabolite_61"/>
     <SBMLMap SBMLid="TAB1_TAB2_TAB3_TAK1_bRafINH_Inactive" COPASIkey="Metabolite_60"/>
-    <SBMLMap SBMLid="TABComplex_Activation_bRafINH" COPASIkey="Reaction_64"/>
+    <SBMLMap SBMLid="TABComplex_Activation_bRafINH" COPASIkey="Reaction_60"/>
     <SBMLMap SBMLid="TCL1Active" COPASIkey="Metabolite_26"/>
     <SBMLMap SBMLid="TNF" COPASIkey="Metabolite_38"/>
-    <SBMLMap SBMLid="TNFR1_Degradation" COPASIkey="Reaction_52"/>
-    <SBMLMap SBMLid="TNFR1_Degradation_Free" COPASIkey="Reaction_50"/>
-    <SBMLMap SBMLid="TNFR1_Production" COPASIkey="Reaction_48"/>
-    <SBMLMap SBMLid="TNFR2_Degradation" COPASIkey="Reaction_53"/>
-    <SBMLMap SBMLid="TNFR2_Degradation_Free" COPASIkey="Reaction_51"/>
-    <SBMLMap SBMLid="TNFR2_Production" COPASIkey="Reaction_49"/>
-    <SBMLMap SBMLid="TNF_Binding_Unbinding_TNFR1" COPASIkey="Reaction_36"/>
-    <SBMLMap SBMLid="TNF_Binding_Unbinding_TNFR2" COPASIkey="Reaction_37"/>
-    <SBMLMap SBMLid="TRADDComplex_Activation_bRafINH" COPASIkey="Reaction_63"/>
-    <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_Activation_pTNFR1" COPASIkey="Reaction_38"/>
+    <SBMLMap SBMLid="TNFR1_Degradation" COPASIkey="Reaction_48"/>
+    <SBMLMap SBMLid="TNFR1_Degradation_Free" COPASIkey="Reaction_46"/>
+    <SBMLMap SBMLid="TNFR1_Production" COPASIkey="Reaction_44"/>
+    <SBMLMap SBMLid="TNFR2_Degradation" COPASIkey="Reaction_49"/>
+    <SBMLMap SBMLid="TNFR2_Degradation_Free" COPASIkey="Reaction_47"/>
+    <SBMLMap SBMLid="TNFR2_Production" COPASIkey="Reaction_45"/>
+    <SBMLMap SBMLid="TRADDComplex_Activation_bRafINH" COPASIkey="Reaction_59"/>
+    <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_Activation_pTNFR1" COPASIkey="Reaction_34"/>
     <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_Active" COPASIkey="Metabolite_43"/>
-    <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_Deactivation" COPASIkey="Reaction_61"/>
+    <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_Deactivation" COPASIkey="Reaction_57"/>
     <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_Inactive" COPASIkey="Metabolite_44"/>
     <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_bRafINH_Active" COPASIkey="Metabolite_58"/>
     <SBMLMap SBMLid="TRADD_TRAF2_TRAF5_RIP1_bRafINH_Inactive" COPASIkey="Metabolite_59"/>
-    <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_Activation_pTNFR2" COPASIkey="Reaction_39"/>
+    <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_Activation_pTNFR2" COPASIkey="Reaction_35"/>
     <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_Active" COPASIkey="Metabolite_45"/>
-    <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_Deactivation" COPASIkey="Reaction_62"/>
+    <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_Deactivation" COPASIkey="Reaction_58"/>
     <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_Inactive" COPASIkey="Metabolite_46"/>
     <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_bRafINH_Active" COPASIkey="Metabolite_68"/>
     <SBMLMap SBMLid="TRAF1_TRAF2_TRAF3_bRafINH_Inactive" COPASIkey="Metabolite_69"/>
-    <SBMLMap SBMLid="TRAFComplex_Activation_bRafINH" COPASIkey="Reaction_68"/>
-    <SBMLMap SBMLid="Tpl2Complex_Activation_RasINH" COPASIkey="Reaction_72"/>
-    <SBMLMap SBMLid="Tpl2Complex_Activation_bRafINH" COPASIkey="Reaction_67"/>
-    <SBMLMap SBMLid="Tpl2_NF_kB_Activation_IKKbeta_IKKalfa" COPASIkey="Reaction_46"/>
+    <SBMLMap SBMLid="TRAFComplex_Activation_bRafINH" COPASIkey="Reaction_64"/>
+    <SBMLMap SBMLid="Tpl2Complex_Activation_RasINH" COPASIkey="Reaction_68"/>
+    <SBMLMap SBMLid="Tpl2Complex_Activation_bRafINH" COPASIkey="Reaction_63"/>
+    <SBMLMap SBMLid="Tpl2_NF_kB_Activation_IKKbeta_IKKalfa" COPASIkey="Reaction_42"/>
     <SBMLMap SBMLid="Tpl2_NF_kB_Active" COPASIkey="Metabolite_53"/>
-    <SBMLMap SBMLid="Tpl2_NF_kB_Deactivation" COPASIkey="Reaction_60"/>
+    <SBMLMap SBMLid="Tpl2_NF_kB_Deactivation" COPASIkey="Reaction_56"/>
     <SBMLMap SBMLid="Tpl2_NF_kB_Inactive" COPASIkey="Metabolite_54"/>
     <SBMLMap SBMLid="Tpl2_NF_kB_RasINH_Active" COPASIkey="Metabolite_70"/>
     <SBMLMap SBMLid="Tpl2_NF_kB_RasINH_Inactive" COPASIkey="Metabolite_71"/>
@@ -5307,39 +5234,38 @@ http://www.calculator.net/half-life-calculator.html
     <SBMLMap SBMLid="Tpl2_NF_kB_bRafINH_Inactive" COPASIkey="Metabolite_67"/>
     <SBMLMap SBMLid="bRafMutated" COPASIkey="Metabolite_30"/>
     <SBMLMap SBMLid="bRafMutatedInactive" COPASIkey="Metabolite_57"/>
-    <SBMLMap SBMLid="bRafMutated_Deactivation_PLX4032" COPASIkey="Reaction_70"/>
-    <SBMLMap SBMLid="bRafMutated_Reconstitution" COPASIkey="Reaction_71"/>
+    <SBMLMap SBMLid="bRafMutated_Deactivation_PLX4032" COPASIkey="Reaction_66"/>
+    <SBMLMap SBMLid="bRafMutated_Reconstitution" COPASIkey="Reaction_67"/>
     <SBMLMap SBMLid="compartment_0" COPASIkey="Compartment_0"/>
     <SBMLMap SBMLid="freeFGFR" COPASIkey="Metabolite_35"/>
     <SBMLMap SBMLid="freeTNFR1" COPASIkey="Metabolite_39"/>
     <SBMLMap SBMLid="freeTNFR2" COPASIkey="Metabolite_41"/>
     <SBMLMap SBMLid="mTORC1Active" COPASIkey="Metabolite_28"/>
     <SBMLMap SBMLid="mTORC1Inactive" COPASIkey="Metabolite_29"/>
-    <SBMLMap SBMLid="mTORC1_Activation_Akt" COPASIkey="Reaction_26"/>
-    <SBMLMap SBMLid="mTORC1_Deactivation" COPASIkey="Reaction_56"/>
+    <SBMLMap SBMLid="mTORC1_Activation_Akt" COPASIkey="Reaction_25"/>
+    <SBMLMap SBMLid="mTORC1_Deactivation" COPASIkey="Reaction_52"/>
     <SBMLMap SBMLid="mTORC2Active" COPASIkey="Metabolite_25"/>
     <SBMLMap SBMLid="mTORC2Inactive" COPASIkey="Metabolite_72"/>
-    <SBMLMap SBMLid="mTORC2_Activation_PI3K" COPASIkey="Reaction_74"/>
-    <SBMLMap SBMLid="mTORC2_Deactivation_bRafMutated" COPASIkey="Reaction_73"/>
+    <SBMLMap SBMLid="mTORC2_Activation_PI3K" COPASIkey="Reaction_70"/>
+    <SBMLMap SBMLid="mTORC2_Deactivation_bRafMutated" COPASIkey="Reaction_69"/>
     <SBMLMap SBMLid="pFGFR" COPASIkey="Metabolite_36"/>
     <SBMLMap SBMLid="pTNFR1" COPASIkey="Metabolite_40"/>
     <SBMLMap SBMLid="pTNFR2" COPASIkey="Metabolite_42"/>
     <SBMLMap SBMLid="proFGFR" COPASIkey="Metabolite_37"/>
     <SBMLMap SBMLid="proTNFR1" COPASIkey="Metabolite_55"/>
     <SBMLMap SBMLid="proTNFR2" COPASIkey="Metabolite_56"/>
-    <SBMLMap SBMLid="reaction_0" COPASIkey="Reaction_0"/>
-    <SBMLMap SBMLid="reaction_14" COPASIkey="Reaction_5"/>
-    <SBMLMap SBMLid="reaction_15" COPASIkey="Reaction_6"/>
-    <SBMLMap SBMLid="reaction_16" COPASIkey="Reaction_7"/>
-    <SBMLMap SBMLid="reaction_17" COPASIkey="Reaction_8"/>
-    <SBMLMap SBMLid="reaction_19" COPASIkey="Reaction_9"/>
-    <SBMLMap SBMLid="reaction_20" COPASIkey="Reaction_10"/>
-    <SBMLMap SBMLid="reaction_27" COPASIkey="Reaction_11"/>
-    <SBMLMap SBMLid="reaction_28" COPASIkey="Reaction_12"/>
-    <SBMLMap SBMLid="reaction_3" COPASIkey="Reaction_1"/>
-    <SBMLMap SBMLid="reaction_5" COPASIkey="Reaction_2"/>
-    <SBMLMap SBMLid="reaction_7" COPASIkey="Reaction_3"/>
-    <SBMLMap SBMLid="reaction_9" COPASIkey="Reaction_4"/>
+    <SBMLMap SBMLid="reaction_14" COPASIkey="Reaction_4"/>
+    <SBMLMap SBMLid="reaction_15" COPASIkey="Reaction_5"/>
+    <SBMLMap SBMLid="reaction_16" COPASIkey="Reaction_6"/>
+    <SBMLMap SBMLid="reaction_17" COPASIkey="Reaction_7"/>
+    <SBMLMap SBMLid="reaction_19" COPASIkey="Reaction_8"/>
+    <SBMLMap SBMLid="reaction_20" COPASIkey="Reaction_9"/>
+    <SBMLMap SBMLid="reaction_27" COPASIkey="Reaction_10"/>
+    <SBMLMap SBMLid="reaction_28" COPASIkey="Reaction_11"/>
+    <SBMLMap SBMLid="reaction_3" COPASIkey="Reaction_0"/>
+    <SBMLMap SBMLid="reaction_5" COPASIkey="Reaction_1"/>
+    <SBMLMap SBMLid="reaction_7" COPASIkey="Reaction_2"/>
+    <SBMLMap SBMLid="reaction_9" COPASIkey="Reaction_3"/>
     <SBMLMap SBMLid="species_0" COPASIkey="Metabolite_0"/>
     <SBMLMap SBMLid="species_1" COPASIkey="Metabolite_1"/>
     <SBMLMap SBMLid="species_10" COPASIkey="Metabolite_10"/>
